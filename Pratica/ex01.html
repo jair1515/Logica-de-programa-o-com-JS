@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 01</title>
+</head>
+<body>
+    <h1>Exercicio 01</h1><br>
+    Que dia da semana é hoje? <input type="text" name="dias" id="dias1">
+    <input type="button" value="vereficar"onclick="vereficar()">
+    <div id="res"></div>
+
+    <script>
+        function vereficar() {
+            var dia = document.querySelector("input#dias1")
+            var res = document.querySelector('div#res')
+            var semana = (dia.value)
+            res.innerHTML = `<p>Hoje é ${semana}<p>`
+                if (semana == 'Sabado' || semana == 'Domingo'){
+                    res.innerHTML = "<p>Bom final de semana<p>"
+                } else {
+                    res.innerHTML = "<p>Boa semana!<p>"
+                }
+        }
+
+    </script>
+
+</body>
+</html> 
